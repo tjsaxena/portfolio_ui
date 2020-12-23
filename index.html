@@ -133,9 +133,9 @@
         }
         
         .card {
-            width: 80%;
-            min-width: 300px;
+            width: 30%;
             margin: 0 auto;
+            min-width: 800px;
             padding: 3em;
             cursor: pointer;
             position: relative;
@@ -145,26 +145,28 @@
         .card::after {
             content: "";
             position: absolute;
-            height: 400px;
-            width: 100%;
-            background: white;
+            height: 100%;
             top: 0;
             right: 0;
             z-index: -2;
         }
         
+        h1 {
+            margin: 0;
+        }
+        
         .card::after {
             width: 0;
-            height: 400px;
             background: #004CFF;
             left: 0;
             z-index: -1;
         }
         
         p {
-            clip-path: circle(0% at 120% 0);
+            clip-path: circle(0% at 100% 0);
             color: white;
-            font-size: 1.2em;
+            font-size: .9em;
+            line-height: 1.6em;
             margin: 0;
             padding: 1.5em 0 0 3em;
             position: relative;
@@ -174,7 +176,7 @@
         p::before {
             content: "";
             position: absolute;
-            height: 100%;
+            height: 80%;
             top: 2em;
             left: 0;
             width: 5px;
@@ -618,7 +620,7 @@
             color: 'white'
         }, "-=.7")
         tl.to('p', {
-            'clipPath': 'circle(100% at 0% 100%)',
+            'clipPath': 'circle(140% at 0% 100%)',
             'transform': 'translateX(0)',
             ease: Back.easeOut.config(4),
         }, "-=.3")
