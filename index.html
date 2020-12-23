@@ -220,6 +220,48 @@
             color: white;
             transform: rotateY(180deg);
         }
+
+        .jiggle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .jiggle-card {
+            transform-style: preserve-3d;
+            min-height: 400px;
+            min-width: 350px;
+            border-radius: 25px;
+            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .jiggle-sneaker {
+            min-width: 300px;
+            padding-top: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .jiggle-sneaker img {
+            width: 300px;
+            border-radius: 25px;
+            z-index: 2;
+        }
+
+        .jiggle-info h3 {
+            padding-top: 50px;
+            text-align: center;
+            transition: all 0.75s ease-out;
+        }
+
+        .jiggle-info h4 {
+            padding-top: 50px;
+            text-align: center;
+            color: #585858;
+            font-weight: lighter;
+            transition: all 0.75s ease-out;
+        }
     </style>
 
 </head>
@@ -405,27 +447,37 @@
             <B>Work Experience</B>
         </h2>
         <div class="row">
-            <div class="col-sm-4" style="align-content: center;">
-                <div class="card1" style="text-align: center; width:300px; height: 350px; border-radius:25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); padding: 25px;">
-                    <img src="resources/Deloitte.png" alt="Deloitte" style="width:250px; border-radius: 25px;">
-                    <h4 style="padding-top: 25px; padding-bottom: 25px;"><b>Knowledge Mangement Business Analyst</b></h4>
-                    <h5>May 2016 - Dec 2017</h5>
-
+            <div class="jiggle-container col-sm-4" id="container_deloitte">
+                <div class="jiggle-card" id="card_deloitte">
+                    <div class="jiggle-sneaker">
+                        <img src="resources/Deloitte.png" alt="Deloitte" style="width:250px; border-radius: 25px;">
+                    </div>
+                    <div class="jiggle-info">
+                        <h3 class="title">Knowedge Management <br> Business Analyst</h3>
+                        <h4>May 2016 to Dec 2017</h4>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4" style="align-content: center;">
-                <div class="card2" style="text-align: center; width:300px; height: 350px; border-radius:25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); padding: 25px;">
-                    <img src="resources/JP_Morgan.png" alt="JP Morgan & Chase" style="width:250px; border-radius: 25px;">
-                    <h4 style="padding-top: 25px; padding-bottom: 25px;"><b>Technology Controls Business Analyst</b></h4>
-                    <h5>Jan 2018 - Nov 2019</h5>
+            <div class="jiggle-container col-sm-4" id="container_jpmc">
+                <div class="jiggle-card" id="card_jpmc">
+                    <div class="jiggle-sneaker">
+                        <img src="resources/JP_Morgan.png" alt="JP Morgan & Chase" style="width:250px; border-radius: 25px;">
+                    </div>
+                    <div class="jiggle-info">
+                        <h3 class="title">Technology Controls <br> Business Analyst</h3>
+                        <h4>Jan 2018 to Nov 2019</h4>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4" style="align-content: center;">
-                <div class="card3" style="text-align: center;width:300px; height: 350px; border-radius:25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); padding: 25px;">
-                    <img src="resources/LAAF_Logo_New.png" alt="LAAF, Inc." style="width:250px; border-radius: 25px;">
-                    <h4 style="padding-top: 25px; padding-bottom: 25px;"><b>Business Analyst</br> Intern</b></h4>
-
-                    <h5>Oct 2020 - Dec 2020</h5>
+            <div class="jiggle-container col-sm-4" id="container_laaf">
+                <div class="jiggle-card" id="card_laaf">
+                    <div class="jiggle-sneaker">
+                        <img src="resources/LAAF_Logo_New.png" alt="LAAF, Inc." style="width:250px; border-radius: 25px;">
+                    </div>
+                    <div class="jiggle-info">
+                        <h3 class="title">Business Analyst <br> Intern</h4>
+                            <h4>Oct 2020 to Dec 2020</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -728,6 +780,43 @@
             }
             startLoop();
         }
+    </script>
+
+    <script>
+        function mouseMoveAnimation(e, card) {
+            let xAxis = (window.innerWidth / 2 - e.pageX) / 50;
+            let yAxis = (window.innerHeight / 2 - e.pageY) / 50;
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        }
+
+        function mouseEnterAnimation(e, card) {
+            card.style.transition = "none";
+        }
+
+        function mouseLeaveAnimation(e, card) {
+            card.style.transition = "all 0.5s ease";
+            card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        }
+
+        const containerLaaf = document.getElementById("container_laaf");
+        const containerDeloitte = document.getElementById("container_deloitte");
+        const containerJpmc = document.getElementById("container_jpmc");
+
+        const cardLaaf = document.getElementById("card_laaf");
+        const cardDeloitte = document.getElementById("card_deloitte");
+        const cardJpmc = document.getElementById("card_jpmc");
+
+        containerLaaf.addEventListener("mousemove", (e) => {mouseMoveAnimation(e, cardLaaf);});
+        containerLaaf.addEventListener("mouseenter", (e) => {mouseEnterAnimation(e, cardLaaf);});
+        containerLaaf.addEventListener("mouseleave", (e) => {mouseLeaveAnimation(e, cardLaaf);});
+
+        containerDeloitte.addEventListener("mousemove", (e) => {mouseMoveAnimation(e, cardDeloitte);});
+        containerDeloitte.addEventListener("mouseenter", (e) => {mouseEnterAnimation(e, cardDeloitte);});
+        containerDeloitte.addEventListener("mouseleave", (e) => {mouseLeaveAnimation(e, cardDeloitte);});
+
+        containerJpmc.addEventListener("mousemove", (e) => {mouseMoveAnimation(e, cardJpmc)});
+        containerJpmc.addEventListener("mouseenter", (e) => {mouseEnterAnimation(e, cardJpmc)});
+        containerJpmc.addEventListener("mouseleave", (e) => {mouseLeaveAnimation(e, cardJpmc)});
     </script>
 </body>
 
