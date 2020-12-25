@@ -15,20 +15,17 @@
         }
         
         .button {
-            background-color: #2C2F79, 5%;
+            background-color: #2980b9;
             border: none;
-            color: black;
-            padding: 5px;
+            color: white;
+            padding: 15px;
+            width: 125px;
+            border-radius: 25px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             margin: 10px 2px;
             cursor: pointer;
-        }
-        
-        .button1 {
-            border-radius: 25px;
-            width: 150px;
         }
         
         .containerbanner {
@@ -50,46 +47,21 @@
         
         .bg-img {
             /* The image used */
-            background-image: url("resources/Portfolio_Background.png");
+            background-image: url("resources/New_Wallpaper.jpg");
             background-position: center;
-            min-height: 450px;
+            background-position: center;
+            min-height: 550px;
             /* Center and scale the image nicely */
             background-repeat: no-repeat;
             background-size: cover;
             /* Needed to position the navbar */
-            position: absoute;
-            padding: 0px;
-        }
-        /* The navbar */
-        
-        .topnav {
-            overflow: hidden;
-        }
-        /* Navbar links */
-        
-        .topnav a {
-            float: left;
-            color: white;
-            text-align: center;
-            text-align: center;
-            padding: 12px 15px;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        
-        .topnav a:hover {
-            background-color: #4147ff63;
-            color: white;
-        }
-        
-        .topnav-right {
-            float: right;
+            position: relative;
+            max-width: 100%;
         }
         
         .container2 {
             background-color: rgba(44, 47, 121, 0.05);
             vertical-align: middle;
-            padding: 15px;
         }
         
         #myBtn {
@@ -101,21 +73,21 @@
             font-size: 18px;
             border: none;
             outline: none;
-            background-color: #2C2F79;
+            background-color: #2980b9;
             color: white;
             cursor: pointer;
             padding: 15px;
-            border-radius: 4px;
+            border-radius: 15px;
         }
         
         #myBtn:hover {
-            background-color: #2c2f7965;
+            background-color: #297fb980;
         }
-                
+        
         .card {
-            width: 30%;
+            width: 80%;
             margin: 0 auto;
-            min-width: 800px;
+            min-width: 500px;
             padding: 3em;
             cursor: pointer;
             position: relative;
@@ -125,7 +97,9 @@
         .card::after {
             content: "";
             position: absolute;
-            height: 100%;
+            height: 400px;
+            width: 80%;
+            background: white;
             top: 0;
             right: 0;
             z-index: -2;
@@ -137,7 +111,7 @@
         
         .card::after {
             width: 0;
-            background: #004CFF;
+            background: #2980b9;
             left: 0;
             z-index: -1;
         }
@@ -146,7 +120,7 @@
             clip-path: circle(0% at 100% 0);
             color: white;
             font-size: 1.2em;
-            line-height: 1.4em;
+            line-height: 1.2em;
             margin: 0;
             padding: 1.5em 0 0 3em;
             position: relative;
@@ -160,13 +134,13 @@
             top: 2em;
             left: 0;
             width: 5px;
-            background: darkblue;
+            background: white;
         }
         
         .flip-card {
             background-color: transparent;
-            width: 350px;
-            height: 350px;
+            width: 275px;
+            height: 275px;
             perspective: 1000px;
         }
         
@@ -202,114 +176,41 @@
             color: white;
             transform: rotateY(180deg);
         }
-
-        .jiggle-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .jiggle-card {
-            transform-style: preserve-3d;
-            min-height: 400px;
-            min-width: 350px;
-            border-radius: 25px;
-            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
-        }
-
-        .jiggle-sneaker {
-            min-width: 300px;
-            padding-top: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .jiggle-sneaker img {
-            width: 300px;
-            border-radius: 25px;
-            z-index: 2;
-        }
-
-        .jiggle-info h3 {
-            padding-top: 50px;
-            text-align: center;
-            transition: all 0.75s ease-out;
-        }
-
-        .jiggle-info h4 {
-            padding-top: 50px;
-            text-align: center;
-            color: #585858;
-            font-weight: lighter;
-            transition: all 0.75s ease-out;
-        }
     </style>
 
 </head>
 
-<body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
-    <div class="bg-img">
-        <div class="topnav visible-lg visible-md visible-sm" id="myTopnav">
-            <div class="topnav-right" style="padding-top: 25px; padding-right: 300px; padding-bottom: 25px;">
-                <a class="active" href="Resp_LAAF_Home.html"><B>Home</B></a>
-                <a href="Resp_LAAF_About.html"><b>About Me</b></a>
-                <a href="Resp_LAAF_Contact.html"><b>Skills</b></a>
-                <a href="Resp_LAAF_Blogs.html"><b>Work Experience</b></a>
-                <a href="Resp_LAAF_Blogs.html"><b>College Projects</b></a>
-                <a href="Resp_LAAF_Blogs.html"><b>Education</b></a>
+<body data-spy="scroll" data-target=".navbar">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><B>Back to Top</B></button>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top visible-lg visible-md">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+        </button>
+                <a class="navbar-brand" href="#">Tanuj Saxena</a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#section1"><b>Hello</b></a></li>
+                        <li><a href="#section2"><b>About Me</b></a></li>
+                        <li><a href="#section3"><b>Skills</b></a></li>
+                        <li><a href="#section4"><b>Work Experience</b></a></li>
+                        <li><a href="#section5"><b>College Projects</b></a></li>
+                        <li><a href="#section6"><b>Education</b></a></li>
+                    </ul>
+                    </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="visible-xs" class="container-fluid">
-            <nav class="navbar" style="min-height: 125px!important; background-color:  rgba(255, 255, 255, 0.65);">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="padding-top: 40px;">
-                        <span class="icon-bar" style="background-color: black!important;"></span>
-                        <span class="icon-bar" style="background-color: black!important;"></span>
-                        <span class="icon-bar" style="background-color: black!important;"></span>
-                      </button>
-                        <a class="navbar-brand" href="Resp_LAAF_Home.html"><img src="resources/Portfolio_Icon.png" height="100px"></a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="myNavbar" style="padding-top: 20px; padding-left: 25px;">
-                        <ul class="nav navbar-nav">
-                            <li class="active ">
-                                <a href="Resp_LAAF_Home.html" style="color:white !important">
-                                    <h4><b>Home</b></h4>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="Resp_LAAF_About.html" style="color:white !important ">
-                                    <h4><b>About Me</b></h4>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="Resp_LAAF_Contact.html" style="color:white !important ">
-                                    <h4><b>Skills</b></h4>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="Resp_LAAF_Blogs.html" style="color:white !important">
-                                    <h4><b>Work Experience</b></h4>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="Resp_LAAF_Blogs.html" style="color:white !important">
-                                    <h4><b>College Projects</b></h4>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="Resp_LAAF_Blogs.html" style="color:white !important ">
-                                    <h4><b>Education</b></h4>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
+    </nav>
 
+    <div class="bg-img container-fluid visible-lg visible-md" id="section1" style="padding-top: 100px;">
         <div class="row">
             <div class="col-sm-3">&nbsp;</div>
             <div class="col-sm-6">
@@ -352,56 +253,70 @@
                         </tr>
                     </table>
                 </div>
+                <div class="col text-center" style="padding-top: 15px; padding-bottom: 15px;"><a href="https://drive.google.com/file/d/108ub_AaIKPSD4dNn7qdIJhIXgjOT1MFn/view?usp=sharing"><button class="button"><b>Resume</b></button></a></div>
             </div>
             <div class="col-sm-3">&nbsp;</div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row ">
+    <div class="container-fluid visible-sm visible-xs">
+        <h3 style="text-align: center; padding-bottom: 25px;">
+            <B>Hello</B>
+        </h3>
+        <div class="row">
+            <div class="col-sm-12"><img src="resources/Hello_Mobile.JPG" class="img-responsive"></div>
+        </div>
+        <div class="col text-center" style="padding-top: 15px; padding-bottom: 15px;"><a href="https://drive.google.com/file/d/108ub_AaIKPSD4dNn7qdIJhIXgjOT1MFn/view?usp=sharing"><button class="button"><b>Resume</b></button></a></div>
+    </div>
+    <div class="container-fluid visible-sm visible-xs" style="padding-top: 25px;">
+        <div class="row">
+            <h3 style="text-align: center; padding-bottom: 25px;">
+                <B>About Me</B>
+            </h3>
+            <div class="col-sm-2">&nbsp;</div>
+            <div class="col-sm-8" style="text-align: center;">
+                <h3><b>
+                    Hi, I am a Business Analyst with 3.5 years of experience working for JP Morgan & Chase and Deloitte, currently seeking for full-time opportunities.</b></h3><br>
+                <h4>I am passionate about providing exceptional customer service through designing best-in-class products and IT applications. I always aim to improve my skillset and become a Subject Matter Expert (SME) in the field of UI/UX, Business Analysis
+                    and IT Project Management.
+                </h4>
+            </div>
+            <div class="col-sm-2">&nbsp;</div>
+        </div>
+    </div>
+    <div class="container-fluid visible-lg visible-md" id="section2" style="padding-top: 50px;padding-bottom: 25px;">
+        <h2 style="text-align: center; padding-bottom: 25px;">
+            <B>About Me</B>
+        </h2>
+        <div class="row">
             <div class="col-sm-2">&nbsp;</div>
             <div class="col-sm-8">
                 <div class="card" id="card">
-                    <h3>
-                        Hi, I am a Business Analyst with 3.5 years of experience working for JP Morgan & Chase and Deloitte, currently seeking for full-time opportunities.</h3>
-                    <p>I am passionate about providing exceptional customer service through designing best-in-class products and IT applications. I always aim to improve my skillset and become a Subject Matter Expert (SME) in the trifecta of Business Analysis
-                        .i.e., People, Process, and Technology.
-                    </p>
+                    <h1>
+                        Hi, I am a Business Analyst with 3.5 years of experience working for JP Morgan & Chase and Deloitte, currently seeking for full-time opportunities.</h1>
+                    <p>I am passionate about providing exceptional customer service through designing best-in-class products and IT applications. I always aim to improve my skillset and become a Subject Matter Expert (SME) in the field of UI/UX, Business
+                        Analysis and IT Project Management.</p>
                 </div>
             </div>
             <div class="col-sm-2">&nbsp;</div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row ">
-
-            <div class="col-sm-6" style="text-align: center; padding-top: 150px; padding-bottom: 150px;">
-                <h2>
-                    <B>Expertise</B>
-                </h2>
-            </div>
-
+    <div class="container-fluid" id="section3" style="padding-top: 50px;">
+        <div class="row visible-md visible-lg" style="align-content: center;">
+            <h2 style="text-align: center;">
+                <B>Skills</B>
+            </h2>
+            <div class="col-sm-3">&nbsp;</div>
             <div class="col-sm-6"><canvas id="canvas"></canvas></div>
-
-
+            <div class="col-sm-3">&nbsp;</div>
         </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-2">&nbsp;</div>
-            <div class="col-sm-4">
-                <img src="resources/Technical_Skills.png" width="400px">
+        <div class="row visible-sm visible-xs" style="text-align: center;">
+            <h2 style="text-align: center;">
+                <B>Skills</B>
+            </h2>
+            <div class="col-sm-12"><img src="resources/Word_sphere.png" width="350px">
             </div>
-
-            <div class="col-sm-6" style="text-align: center; padding-top: 100px; padding-bottom: 150px;">
-                <h2>
-                    <B>Technical Skills</B>
-                </h2>
-            </div>
-            <div class="col-sm-1">&nbsp;</div>
         </div>
-    </div>
-    <div class="container-fluid" style="padding-bottom: 50px;">
-        <div class="row">
+        <div class="row" style="padding-bottom: 50px;">
             <div class="col-sm-2">&nbsp;</div>
             <div class="col-sm-8" style="text-align: center;">
                 <table>
@@ -413,7 +328,7 @@
                         <td><img class="img-responsive" src="resources/Figma.png"></td>
                     </tr>
                     <tr>
-                        <td><img class="img-responsive" src="resources/alteryx_Icon.jpg" style="padding-right: 10px;"></td>
+                        <td><img class="img-responsive" src="resources/Jira_Icon.png" style="padding-right: 10px;"></td>
                         <td><img class="img-responsive" src="resources/Office_Icon.png" style="padding-right: 10px;"></td>
                         <td><img class="img-responsive" src="resources/Visio_Icon.webp" style="padding-right: 10px;"></td>
                         <td><img class="img-responsive" src="resources/Tableau_Logo.png" style="padding-right: 10px;"></td>
@@ -423,130 +338,282 @@
             </div>
             <div class="col-sm-2">&nbsp;</div>
         </div>
+        <div class="row">
+            <div class="col-sm-2">&nbsp;</div>
+            <div class="col-sm-4">
+                <img src="resources/Technical_Skills.png" width="450px">
+            </div>
+
+            <div class="col-sm-6" style="text-align: center; padding-top: 50px;">
+                <h2>
+                    <B>Technical Skills</B>
+                </h2>
+            </div>
+            <div class=" col-sm-1 ">&nbsp;</div>
+        </div>
+
     </div>
-    <div class="container-fluid" style="padding-top: 50px; padding-bottom: 50px;">
-        <h2 style="text-align: center; padding-bottom: 50px;">
+    <div class="container-fluid " id="section4" style="padding-top: 35px; padding-bottom: 35px; padding-left: 150px; padding-right: 150px; ">
+        <h2 style="text-align: center; padding-bottom: 25px; ">
             <B>Work Experience</B>
         </h2>
-        <div class="row">
-            <div class="jiggle-container col-sm-4" id="container_deloitte">
-                <div class="jiggle-card" id="card_deloitte">
-                    <div class="jiggle-sneaker">
-                        <img src="resources/Deloitte.png" alt="Deloitte" style="width:250px; border-radius: 25px;">
-                    </div>
-                    <div class="jiggle-info">
-                        <h3 class="title">Knowedge Management <br> Business Analyst</h3>
-                        <h4>May 2016 to Dec 2017</h4>
-                    </div>
+        <div class="row ">
+            <div class="col-sm-4" style="padding-bottom: 10px;">
+
+                <div class="card1" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); width:300px; border-radius: 25px; padding: 15px; text-align: center; background-color: #f1f1f1; ">
+                    <img src="resources/Deloitte.png " alt="Deloitte " style="width:250px; border-radius: 25px; ">
+                    <p>&nbsp;</p>
+                    <h4 class="title">
+                        <B>Knowedge Management<br>Business Analyst</B>
+                    </h4>
+                    <p>&nbsp;</p>
+                    <h5>May 2016 to Dec 2017</h5>
+                    <p>&nbsp;</p>
+                </div>
+
+            </div>
+            <div class="col-sm-4" style="padding-bottom: 10px;">
+                <div class="card2 " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); width:300px; border-radius: 25px; padding: 15px; text-align: center; background-color: #f1f1f1; ">
+                    <img src="resources/JP_Morgan.png " alt="JP Morgan & Chase " style="width:250px; border-radius: 25px; ">
+                    <p>&nbsp;</p>
+                    <h4 class="title">
+                        <B>Technology Controls <br>Business Analyst</B>
+                    </h4>
+                    <p>&nbsp;</p>
+                    <h5>May 2016 to Dec 2017</h5>
+                    <p>Some text</p>
                 </div>
             </div>
-            <div class="jiggle-container col-sm-4" id="container_jpmc">
-                <div class="jiggle-card" id="card_jpmc">
-                    <div class="jiggle-sneaker">
-                        <img src="resources/JP_Morgan.png" alt="JP Morgan & Chase" style="width:250px; border-radius: 25px;">
-                    </div>
-                    <div class="jiggle-info">
-                        <h3 class="title">Technology Controls <br> Business Analyst</h3>
-                        <h4>Jan 2018 to Nov 2019</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="jiggle-container col-sm-4" id="container_laaf">
-                <div class="jiggle-card" id="card_laaf">
-                    <div class="jiggle-sneaker">
-                        <img src="resources/LAAF_Logo_New.png" alt="LAAF, Inc." style="width:250px; border-radius: 25px;">
-                    </div>
-                    <div class="jiggle-info">
-                        <h3 class="title">Business Analyst <br> Intern</h4>
-                            <h4>Oct 2020 to Dec 2020</h4>
-                    </div>
+            <div class="col-sm-4" style="padding-bottom: 10px;">
+                <div class="card3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); width:300px; border-radius: 25px; padding: 15px; text-align: center; background-color: #f1f1f1; ">
+                    <img src="resources/LAAF_Logo_New.png " alt="JP Morgan & Chase " style="width:250px; border-radius: 25px; ">
+                    <p>&nbsp;</p>
+                    <h4 class="title">
+                        <B>Business Analyst<br>Intern</B>
+                    </h4>
+                    <p>&nbsp;</p>
+                    <h5>Oct 2020 to Dec 2020</h5>
+                    <p>&nbsp;</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid" style="padding-top: 50px; padding-bottom: 50px;">
-        <h2 style="text-align: center; padding-bottom: 50px;">
+    <div class="container-fluid " id="section5" style="padding-top: 50px; padding-right: 150px; padding-left: 150px; ">
+        <h2 style="text-align: center; padding-bottom: 25px; ">
             <B>College Projects</B>
         </h2>
-        <div class="row">
-            <div class="col-sm-4 ">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="resources/George_Brown_College_logo.png" alt="Alumni Success Stories" style="width:350px">
+        <div class="row ">
+            <div class="col-sm-4 text-center">
+                <div class="flip-card ">
+                    <div class="flip-card-inner ">
+                        <div class="flip-card-front ">
+                            <img src="resources/George_Brown_College_logo.png " alt="Alumni Success Stories " style="width:275px ">
                         </div>
-                        <div class="flip-card-back">
-                            <h3 style="padding-top: 25px;">T405 Program Alumni Success Stories</h3>
-                            <h5 style="padding-top: 50px;">Designed a mobile application UI and re-engineered the process of collecting /reviewing /publishing 'Alumni Success Stories' for Business Analysis program (T405) at GBC.</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 ">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="resources/AssemblIn_Icon.png" alt="AssembleIn" style="width:350px">
-                        </div>
-                        <div class="flip-card-back">
-                            <h3 style="padding-top: 25px;">AssembleIn - Events Booking Web Application</h3>
-                            <h5 style="padding-top: 50px;">Designed a web application for booking events, activities, movies, etc. happening all-around major Canadian cities. </h5>
+                        <div class="flip-card-back ">
+                            <h3 style="padding-top: 25px; ">T405 Program Alumni Success Stories</h3>
+                            <h5 style="padding-top: 25px; ">A mobile application UI and re-engineered process of collecting /reviewing /publishing 'Alumni Success Stories' for business analysis program (T405) at GBC.</h5><br>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 ">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="resources/RPA_Icon.JPG" alt="Alumni Success Stories" style="width:350px">
+            <div class="col-sm-4">
+                <div class="flip-card ">
+                    <div class="flip-card-inner ">
+                        <div class="flip-card-front ">
+                            <img src="resources/AssemblIn_Icon.png " alt="AssembleIn " style="width:275px ">
                         </div>
-                        <div class="flip-card-back">
-                            <h3 style="padding-top: 25px;">Automation of Employee Digital Directory System</h3>
-                            <h5 style="padding-top: 50px;">Designed a micro-bot that automates the process of reading information stored in a Microsoft Excel spreadsheet and feeds it into a google form.</h5>
+                        <div class="flip-card-back ">
+                            <h3 style="padding-top: 25px; ">AssembleIn - Events Booking Web Application</h3>
+                            <h5 style="padding-top: 25px; ">A web application for booking events, activities, movies, etc., scheduled in major Canadian cities.</h5>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner ">
+                        <div class="flip-card-front ">
+                            <img src="resources/RPA_Icon.JPG " alt="Alumni Success Stories " style="width:275px ">
+                        </div>
+                        <div class="flip-card-back ">
+                            <h3 style="padding-top: 25px; ">Automation of Employee Digital Directory System</h3>
+                            <h5 style="padding-top: 25px; ">A UI-Path micro-bot that automates the process of 'Scanning information stored on a Microsoft Excel spreadsheet and feeding it into a google form'.</h5><br>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid visible-lg visible-md" style="padding-top: 50px; padding-bottom: 50px;">
-        <h2 style="text-align: center; padding-bottom: 50px;">
+    <div class="container-fluid visible-lg visible-md " style="padding-bottom: 50px; padding-top: 25px; padding-right: 150px; padding-left: 150px; ">
+
+        <div class="row ">
+            <div class="col-sm-4 ">
+                <table>
+                    <tr>
+                        <td style="padding-right: 15px; ">
+                            <h4>
+                                <B>Artifacts</B>
+                            </h4>
+                        </td>
+
+                        <td style="padding-right: 15px; ">
+                            <a href="https://drive.google.com/file/d/1w8movsxaBW3SxTogvw_wLuhbrj0h8ZDK/view?usp=sharing " target="_Blank "><img src="resources/PPT_Icon.png " width="50px "></a>
+                        </td>
+                        <td style="padding-right: 15px; ">
+                            <a href="https://drive.google.com/file/d/1GuSF0m5dOp5Aasr0ODMPoVbxaJ_f0Ko7/view?usp=sharing " target="_Blank "><img src="resources/UIUX_Icon.png " width="50px "></a>
+                        </td>
+                        <td>
+                            <a href="https://www.figma.com/proto/o531SkJuJ92U9h1MAzY0kS/T405SuccessStories?node-id=4%3A73&scaling=scale-down " target="_Blank "><img src="resources/Figma_Icon.png " width="50px "></a>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-4 ">
+                <table>
+                    <tr>
+                        <td style="padding-right: 15px; ">
+                            <h4>
+                                <B>Artifacts</B>
+                            </h4>
+                        </td>
+                        <td style="padding-right: 15px; ">
+                            <a href="https://youtu.be/ABwgpi9xx84 " target="_Blank "><img src="resources/YouTube_Icon.png " width="50px "></a>
+                        </td>
+
+                        <td style="padding-right: 15px; ">
+                            <a href="https://www.figma.com/proto/aF0LyNyaw5cqpwUY9rzwA4/BA-Case-2-Team-12-Colors?node-id=14%3A1&scaling=scale-down " target="_Blank "><img src="resources/Figma_Icon.png " width="50px "></a>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-4 ">
+                <table>
+                    <tr>
+                        <td style="padding-right: 15px; ">
+                            <h4>
+                                <B>Artifacts</B>
+                            </h4>
+                        </td>
+                        <td style="padding-right: 15px; ">
+                            <a href="https://youtu.be/dT6onD10kBs " target="_Blank "><img src="resources/YouTube_Icon.png " width="50px "></a>
+                        </td>
+                        <td style="padding-right: 15px; ">
+                            <a href=" " target="_Blank ">&nbsp;
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid visible-sm visible-xs" style="padding-bottom: 50px; padding-top: 25px; padding-right: 150px; padding-left: 150px; ">
+
+        <div class="row ">
+            <div class="col-sm-4 ">
+                <table>
+                    <tr>
+                        <td style="padding-right: 15px; ">
+                            <h5>
+                                <B>GBC Alumni Success Stories</B>
+                            </h5>
+                        </td>
+
+                        <td style="padding-right: 15px; ">
+                            <a href="https://drive.google.com/file/d/1w8movsxaBW3SxTogvw_wLuhbrj0h8ZDK/view?usp=sharing " target="_Blank "><img src="resources/PPT_Icon.png " width="50px "></a>
+                        </td>
+                        <td style="padding-right: 15px; ">
+                            <a href="https://drive.google.com/file/d/1GuSF0m5dOp5Aasr0ODMPoVbxaJ_f0Ko7/view?usp=sharing " target="_Blank "><img src="resources/UIUX_Icon.png " width="50px "></a>
+                        </td>
+                        <td>
+                            <a href="https://www.figma.com/proto/o531SkJuJ92U9h1MAzY0kS/T405SuccessStories?node-id=4%3A73&scaling=scale-down " target="_Blank "><img src="resources/Figma_Icon.png " width="50px "></a>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-4 ">
+                <table>
+                    <tr>
+                        <td style="padding-right: 15px; ">
+                            <h5>
+                                <B>AssembleIn</B>
+                            </h5>
+                        </td>
+                        <td style="padding-right: 15px; ">
+                            <a href="https://youtu.be/ABwgpi9xx84 " target="_Blank "><img src="resources/YouTube_Icon.png " width="50px "></a>
+                        </td>
+
+                        <td style="padding-right: 15px; ">
+                            <a href="https://www.figma.com/proto/aF0LyNyaw5cqpwUY9rzwA4/BA-Case-2-Team-12-Colors?node-id=14%3A1&scaling=scale-down " target="_Blank "><img src="resources/Figma_Icon.png " width="50px "></a>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-4 ">
+                <table>
+                    <tr>
+                        <td style="padding-right: 15px; ">
+                            <h5>
+                                <B>Employee Digital Directory System</B>
+                            </h5>
+                        </td>
+                        <td style="padding-right: 15px; ">
+                            <a href="https://youtu.be/dT6onD10kBs " target="_Blank "><img src="resources/YouTube_Icon.png " width="50px "></a>
+                        </td>
+                        <td style="padding-right: 15px; ">
+                            <a href=" " target="_Blank ">&nbsp;
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid visible-lg visible-md" id="section6" style="padding-top: 50px; padding-bottom: 50px; ">
+        <h2 style="text-align: center; padding-bottom: 25px; ">
             <B>Education</B>
         </h2>
-        <div class="row">
-            <div class="col-sm-2">&nbsp;</div>
-            <div class="col-sm-8" style="text-align: center;"><img src="resources/Education_Horizontal.png" width="600px"></div>
-            <div class="col-sm-2">&nbsp;</div>
+        <div class="row ">
+            <div class="col-sm-2 ">&nbsp;</div>
+            <div class="col-sm-8 " style="text-align: center; "><img src="resources/Education_Hor.png " class="img-responsive "></div>
+            <div class="col-sm-2 ">&nbsp;</div>
         </div>
     </div>
-    <div class="container-fluid visible-sm visible-xs" style="padding-top: 50px; padding-bottom: 50px;">
-        <h3 style="text-align: center;">
+    <div class="container-fluid visible-sm visible-xs " id="section6 " style="padding-top: 50px; padding-bottom: 50px; ">
+        <h3 style="text-align: center; ">
             <B>Education</B>
         </h3>
-        <div class="row">
+        <div class="row ">
 
-            <div class="col-sm-4" style="text-align: center;"><img src="resources/Education_vertical.png" width="300px"></div>
+            <div class="col-sm-4 " style="text-align: center; "><img src="resources/Education_Ver.png " width="300px "></div>
 
         </div>
     </div>
-    <div class="container-fluid container2">
+    <div class="container-fluid container2 ">
         <div class="row ">
-            <div class="col-sm-4 "><img src="resources/Portfolio_Icon.png" height="80px">
-                <h6>Copyright © 2020 Tanujsaxena.com - All Rights Reserved.</h6>
+            
+            <div class="col-sm-2" style="padding-top: 25px;"><img src="resources/TJ_Icon.png" height="80px">
             </div>
-            <div class="col-sm-4 ">&nbsp;</div>
-            <div class="col-sm-4 ">
+            <div class="col-sm-8">&nbsp;</div>
+            <div class="col-sm-2">
                 <h4><b>Address:</b></h4>
-                <h4>Toronto ON, Canada</h4><br>
+                <h4>Toronto, ON,<br> Canada</h4>
                 <table>
                     <tr>
                         <td>
-                            <a href="mailto:tjsaxena123@gmail.com" target="_blank "><img src="resources/email_Icon.png" height="20px"></a>
+                            <a href="mailto:tjsaxena123@gmail.com " target="_blank "><img src="resources/email_Icon.png" height="20px"></a>
+                        </td>
+                        <td style="padding-left: 25px; ">&nbsp;</td>
+                        <td>
+                            <a href="https://www.linkedin.com/in/tjsaxena/ " target="_Blank"><img src="resources/linkedin_icon.png" height="28px"></a>
                         </td>
                         <td style="padding-left: 25px;">&nbsp;</td>
                         <td>
-                            <a href="https://www.linkedin.com/in/tjsaxena/" target="_Blank"><img src="resources/linkedin_icon.jpg" height="25px"></a>
+                            <a href="https://www.instagram.com/tanujsaxena/" target="_Blank"><img src="resources/Inta_Icon.png" height="30px"></a>
                         </td>
                     </tr>
                 </table>
@@ -554,7 +621,6 @@
 
         </div>
     </div>
-
     <script>
         //Get the button
         var mybutton = document.getElementById("myBtn");
@@ -596,7 +662,7 @@
         tl.to(rule2, {
             width: '100%'
         }, "-=.3")
-        tl.to('h3', {
+        tl.to('h1', {
             color: 'white'
         }, "-=.7")
         tl.to('p', {
@@ -722,7 +788,7 @@
                     const alpha = 0.6 + 0.4 * (x / radius);
                     const size = fontSize + 2 + 5 * (x / radius);
                     ctx.fillStyle = `rgba(0,0,0,${alpha})`;
-                    ctx.font = `${size}px "Helvetica Neue", sans-serif`;
+                    ctx.font = `${size}px "Helvetica Neue ", sans-serif`;
                     ctx.fillText(text, y + width / 2, -z + height / 2);
 
                     ix--;
@@ -764,42 +830,6 @@
         }
     </script>
 
-    <script>
-        function mouseMoveAnimation(e, card) {
-            let xAxis = (window.innerWidth / 2 - e.pageX) / 50;
-            let yAxis = (window.innerHeight / 2 - e.pageY) / 50;
-            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-        }
-
-        function mouseEnterAnimation(e, card) {
-            card.style.transition = "none";
-        }
-
-        function mouseLeaveAnimation(e, card) {
-            card.style.transition = "all 0.5s ease";
-            card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-        }
-
-        const containerLaaf = document.getElementById("container_laaf");
-        const containerDeloitte = document.getElementById("container_deloitte");
-        const containerJpmc = document.getElementById("container_jpmc");
-
-        const cardLaaf = document.getElementById("card_laaf");
-        const cardDeloitte = document.getElementById("card_deloitte");
-        const cardJpmc = document.getElementById("card_jpmc");
-
-        containerLaaf.addEventListener("mousemove", (e) => {mouseMoveAnimation(e, cardLaaf);});
-        containerLaaf.addEventListener("mouseenter", (e) => {mouseEnterAnimation(e, cardLaaf);});
-        containerLaaf.addEventListener("mouseleave", (e) => {mouseLeaveAnimation(e, cardLaaf);});
-
-        containerDeloitte.addEventListener("mousemove", (e) => {mouseMoveAnimation(e, cardDeloitte);});
-        containerDeloitte.addEventListener("mouseenter", (e) => {mouseEnterAnimation(e, cardDeloitte);});
-        containerDeloitte.addEventListener("mouseleave", (e) => {mouseLeaveAnimation(e, cardDeloitte);});
-
-        containerJpmc.addEventListener("mousemove", (e) => {mouseMoveAnimation(e, cardJpmc)});
-        containerJpmc.addEventListener("mouseenter", (e) => {mouseEnterAnimation(e, cardJpmc)});
-        containerJpmc.addEventListener("mouseleave", (e) => {mouseLeaveAnimation(e, cardJpmc)});
-    </script>
 </body>
 
 </html>
